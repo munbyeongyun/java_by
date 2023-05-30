@@ -12,5 +12,5 @@ public class JavaSample {
 		System.out.println("Hello Java!");
 
 	}
-
+	
 }
