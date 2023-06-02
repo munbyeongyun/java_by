@@ -15,7 +15,7 @@ public class TriangleEx {
 		num2 = sc.nextInt();
 		num3 = sc.nextInt();
 			
-		if(num1 + num2 <= num3) {
+		if(num1 + num2 < num3) {
 			System.out.println("삼각형을 만들수 있습니다.");
 		} else {
 			System.out.println("삼각형을 만들수 없습니다.");
