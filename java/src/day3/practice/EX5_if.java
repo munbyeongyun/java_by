@@ -9,7 +9,7 @@ public class EX5_if {
 		// 조건 연산자 이용
 		// 입력 : M  -> 당신은 여자입니까? false
 		Scanner sc = new Scanner(System.in);
-		System.out.println("성별을 적으세요 (M 또는 W):.");
+		System.out.println("성별을 적으세요 (M 또는 W):");
 		String gender = sc.nextLine();
 		//boolean result = gender.equals("W");
 		
