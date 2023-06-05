@@ -1,4 +1,4 @@
-package day5.practice;
+package day5.homework;
 
 public class TeamLeaderEx {
 
