@@ -26,7 +26,5 @@ public class PrimeNumbersEx2 {
 					System.out.println(i);
 				}		
 			}
-
+		}
 	}
-
-}
