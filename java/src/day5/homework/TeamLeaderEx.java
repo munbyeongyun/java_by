@@ -1,5 +1,6 @@
 package day5.homework;
 
+import java.util.Scanner;
 
 public class TeamLeaderEx {
 
@@ -9,18 +10,24 @@ public class TeamLeaderEx {
 		// 학생 번호가 주어졌을 때 조장인지 조원인지 판별하는 코드를 작성하세요.
 		// switch문으로
 		
-		int min =1, max = 30;
-		int random =(int)(Math.random() * (max - min + 1) + min);
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input student number :");		
+		num = sc.nextInt();
 		
-		switch(random % 3) {
+		
+		//학생 번호가 팀장 번호인지 아닌지 판별
+		//번호가 3의 배수이면 팀장 아니면 팀원
+		//num을 3으로 나누었을 때 나머지가 0과 같다면 팀장, 아니면 팀원으로 출력
+		switch(num % 3) {
 		case 0:
-			System.out.println(random +" 팀리더");
+			System.out.println("Student number " + num + " is the team leader");
 			break;
-		default:
-			
-			System.out.println(random + " 조원");
+		default:			
+			System.out.println("Student number " + num   + " is the member of team");
 		}		
-
+		
+		sc.close();
 	}
 
 }
