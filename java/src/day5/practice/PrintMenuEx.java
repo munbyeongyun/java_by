@@ -25,7 +25,6 @@ public class PrintMenuEx {
 			System.out.println("3. Exit ");
 			System.out.println(" ");
 			System.out.println("Select Menu : ");
-			System.out.println(" ");
 			
 			//메뉴를 입력
 			menu = sc.nextInt();
