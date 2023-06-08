@@ -13,7 +13,7 @@ public class HelloWorldEx {
 		}
 		System.out.println("===================");
 		i = 1;
-		while(i <=5) {
+		while(i == 5) {
 			System.out.println("Hello world");
 			i++;
 		}

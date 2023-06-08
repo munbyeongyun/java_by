@@ -32,7 +32,7 @@ public class PrimeNumbersEx {
 		if(count == 2) {
 			System.out.println(i);
 		}
-		 i++;
+		i++;
 	  }
 
 	}
