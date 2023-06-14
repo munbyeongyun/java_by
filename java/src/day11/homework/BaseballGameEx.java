@@ -69,6 +69,7 @@ public class BaseballGameEx {
 			}
 			
 			System.out.println(strike + "스트라이크" + ball + "볼" + out + "아웃" );
+			System.out.println(" ");
         	if(strike == 3) {
             		System.out.println("정답!");
                     	break;     
@@ -78,6 +79,6 @@ public class BaseballGameEx {
         	ball = 0;
 		
 	}
-		sc.close();
+		
 	}
 }
