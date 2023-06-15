@@ -18,7 +18,6 @@ public class BaseballGameEx {
 		int userArr [] = new int[3];
 		int strike = 0;
 		int ball = 0;
-		int out = 0;
 		boolean checkArr[] = new boolean[10];
 		
 		Scanner sc = new Scanner(System.in);
@@ -63,22 +62,24 @@ public class BaseballGameEx {
 						strike++;
 					} else if (arr[i] == userArr[j] && i != j){
 						ball++;
-					}
-						
+					} 
 				}
 			}
 			
-			System.out.println(strike + "스트라이크" + ball + "볼" + out + "아웃" );
+			System.out.println(strike + "스트라이크" + ball + "볼" );
 			System.out.println(" ");
         	if(strike == 3) {
-            		System.out.println("정답!");
-                    	break;     
+            	System.out.println("정답!");
+                    break;     
         	}
-
+        	if(strike == 0 && ball == 0) {
+    			System.out.println("3O");
+    		}
+        	
         	strike = 0;
         	ball = 0;
 		
 	}
-		
+		sc.close();
 	}
 }
