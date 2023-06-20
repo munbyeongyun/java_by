@@ -152,7 +152,14 @@ public class ShopManager {
 	}
 	
 	private void sell() {
-		// TODO Auto-generated method stub
+		// 판매할 제품명 입력
+		System.out.print("제품명 : ");
+		sc.nextLine();
+		String name = sc.nextLine();
+		
+		//판매할 제품 수량
+		System.out.print("수량  : ");
+		int sell = sc.nextInt();
 		
 	}
 }

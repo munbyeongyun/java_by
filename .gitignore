@@ -25,3 +25,4 @@ replay_pid*
 java/.project
 java/.classpath
 /bin/
+*.launch
