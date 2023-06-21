@@ -12,8 +12,14 @@ public class BeverageMachineEX {
 	 * 3. 제품 입고
 	 * 4. 프로그램 종료
 	 * */
+	public static final int MAX = 10;
 	private Scanner sc = new Scanner(System.in);
-	
+	static String[] box = new String[MAX];
+    static int[] price = new int[MAX];
+    static int[] stock = new int[MAX];
+    static int count = 3; // 메뉴의 갯수
+    private int totalPrice; //매출금액
+    
 	public void run() {
 		System.out.println("프로그램 시작!!");
 		
