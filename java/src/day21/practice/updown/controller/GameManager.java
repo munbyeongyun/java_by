@@ -93,24 +93,36 @@ public class GameManager implements Program {
 		}
 		// 기록: 아이디(입력), 플레이 횟수
 		// 아이디 입력
+		
+		if(list.size() == 5 &&  list.get(list.size()-1).getCount() <= count) {
+			return;
+		}
+		if(list.size() == 5) {
+			//마지막 기록을 삭제
+			list.remove(list.size()-1);
+		}
+		
 		System.out.println("Record ID : ");
 		String id = sc.next();
 		// 어떻게 저장해서 관리할 건가?
 		RecordGame rec = new RecordGame(id, count);
 		list.add(rec);
 		//sort();
-		list.sort(new Comparator<RecordGame>() {
-
+		list.sort(null);
+		
+		
+		//list.sort(new Comparator<RecordGame>() {
+		/*
 			@Override
 			public int compare(RecordGame o1, RecordGame o2) {
 				return o1.getCount() - o2.getCount();
 			}
 			
-		});
+		});*/
 		
 		
 	}
-	private void sort() {
+	/*private void sort() {
 		for(int i = 0; i < list.size()-1; i++) {
 			for(int j = 0; j < list.size()-1; j++) {
 				if(list.get(j).getCount() > list.get(j+1).getCount()) {
@@ -120,8 +132,5 @@ public class GameManager implements Program {
 				}
 			}
 		}
-	}
-
-
-
+	}*/
 }
