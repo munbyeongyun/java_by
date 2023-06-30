@@ -1,4 +1,4 @@
-package day22.practice.controler;
+package day22.practice.student.controler;
 
 public interface Program {
 	void printMenu();
