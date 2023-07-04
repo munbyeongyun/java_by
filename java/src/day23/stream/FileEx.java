@@ -8,12 +8,14 @@ public class FileEx {
 	public static void main(String[] args) {
 		File file = new File("tset");
 		try {
-			//해당 파일 또는 폴더가 존재하지 않고 파일이 폴더가 아닌 파일이면 파일을 생성
+			//해당 파일 또는 폴더가 존재하지 않고 
+			//이름에 .이 들어가면(확장자가 존재하면) 파일을 생성
 			if(!file.exists() && file.getName().contains(".")) {
 				file.createNewFile();
 				System.out.println("Create Flie!");
 			}
-
+			//해당 파일 또는 폴더가 존재하지않고
+			//이름에 .이 안들어가면(확장자가 없으면) 폴더를 생성
 			if(!file.exists() && !file.getName().contains(".")) {
 				file.mkdir();
 				System.out.println("Create Directtory!");
