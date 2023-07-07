@@ -6,19 +6,21 @@ import java.util.Objects;
 import lombok.Data;
 
 @Data
-public class Student implements Serializable{
-	
-	private static final long serialVersionUID = -3808601629411418437L;
-	
-	private String num;
-	private String name;
+public class Student implements Serializable {
+
+	private static final long serialVersionUID = 107837677974301860L;
+	private String num; //학번
+	private String name; //이름
 	
 	//학번, 이름을 이용한 생성자
 	public Student(String num, String name) {
 		this.num = num;
 		this.name = name;
 	}
-
+	//복사생성자
+	public Student(Student tmp) {
+		this(tmp.num, tmp.name);
+	}
 	//학번으로만 객체가 같은지 판별
 	@Override
 	public boolean equals(Object obj) {
@@ -36,14 +38,14 @@ public class Student implements Serializable{
 	public int hashCode() {
 		return Objects.hash(num);
 	}
-
 	@Override
 	public String toString() {
 		return num + " " + name;
 	}
 	
 	
-
+	
 }
+
 
 
