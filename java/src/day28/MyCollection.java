@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class MyCollection {
 
-	public static void main(String[] args) {
+	public void output() {
 		
 		FileWriter fw = null;
 	    try {
