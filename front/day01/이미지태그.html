@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이미지 태그 예제</title>
+</head>
+<body>
+	<!-- 
+		img
+		- 이미지를 추가할 때 사용하는 태그
+		- 속성으로 src 필수, alt는 웹표준에 맞추려면 필수, width/heigh는 너비/높이
+		- src에는 절대 경로와 상대 경로를 이용하여 가져옴.
+			- 상대 경로 : 파일을 기준으로 이미지가 어디에 있는지 탐색 가져옴
+			- 절대 경로 : 서버의 최상위 폴더를 기준으로 이미지가 어디에 있는지 탐색 해서 가져옴
+			- 서버의 최상위 경로는 open filder를 이용하여 열 때마다 달라질 수 있음
+		-->
+</body>
+<img src="../img/강아지.jpg" alt="강아지 이미지" height="200">
+<br>
+<!-- 절대 경로를 이용하는 경우 : / 으로 시작하면 최상위 폴더를 기준-->
+<img src="/img/강아지.jpg" alt="강아지 이미지" height="200">
+</html>
