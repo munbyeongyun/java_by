@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>get</title>
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="box">
+		<span>안녕하세요.</span>
+	</div>
+	<input type="text" class="input-search">
+	<button class="btn-search">검색</button>
+	<script>
+		let html = $('.box').html();
+		let text = $('.box').text();
+		console.log(html);
+		console.log(text);
+		//클래스가 btn-search인 요소를 클릭하면 input태그에 입력된 내용을 가져옴
+		$('.btn-search').click(()=>{
+			let val = $('.input-search').val();
+			console.log(val);
+			$('.input-search').val('만나서 반갑습니다.');
+		});
+
+		$('span').text('만나서 반갑습니다.');
+		$('span').html('<h1>만나서 반갑습니다.<h1>');
+	</script>
+</body>
+</html>

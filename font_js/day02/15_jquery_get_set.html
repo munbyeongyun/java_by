@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>attr(), prop()</title>
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<input type="checkbox" name="fruit" value="apple" checked> 사과 <br>
+	<button class="btn">클릭</button>
+	<button class="btn-checked">체크</button>
+	<script>
+		$('.btn').click(function(){
+			let checked1 = $('[name=fruit]').prop('checked');
+			let checked2 = $('[name=fruit]').attr('checked');
+			console.log(`prop('checkde') : ${checked1}`);
+			console.log(`attr('checkde') : ${checked2}`);
+		});
+		$('.btn-checked').click(function(){
+			$('[name=fruit]').prop('checked',true);
+		});
+		$('[name=fruit]').click(function(){
+			let value = $(this).val();
+			console.log(value);
+		});
+	</script>
+</body>
+</html>
