@@ -26,3 +26,8 @@ java/.project
 java/.classpath
 /bin/
 *.launch
+
+.classpath
+.project
+.settings/
+meta-inf/
