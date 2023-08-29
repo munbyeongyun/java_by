@@ -8,13 +8,14 @@ import kr.kh.study.service.MemberService;
 
 @Controller
 public class MemberController {
-
+	
 	@Autowired
 	private MemberService memberService;
 	
 	@GetMapping("/test")
 	public String test() {
-		
+		int count = memberService.count();
+		System.out.println(count);
 		return "redirect:/";
 	}
 }
