@@ -18,7 +18,7 @@ public class HomeController {
 	@RequestMapping(value = "/")
 	public String home(Model model) {
 		model.addAttribute("name", "abc");
-		return "home";
+		return "/main/home";
 	}
 	
 	@RequestMapping(value = "/test1")
