@@ -151,7 +151,7 @@
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-web</artifactId>
 		    <version>${org.springframework-version}</version>
-		</dependency>
+		</dependency>		
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-core</artifactId>
@@ -166,8 +166,7 @@
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-taglibs</artifactId>
 		    <version>${org.springframework-version}</version>
-		</dependency>		
-				  
+		</dependency>
 	</dependencies>
     <build>
         <plugins>

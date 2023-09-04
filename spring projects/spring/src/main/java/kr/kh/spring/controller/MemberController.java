@@ -17,12 +17,12 @@ import kr.kh.spring.vo.MemberVO;
 
 @Controller
 public class MemberController {
-
+	
 	@Autowired
 	private MemberService memberService;
 	
 	@RequestMapping(value="/member/signup", method=RequestMethod.GET)
-	public String signup(Model model) {
+	public String signup() {
 		
 		return "/member/signup";
 	}
@@ -30,7 +30,7 @@ public class MemberController {
 	@RequestMapping(value="/member/signup", method=RequestMethod.POST)
 	public String signupPost(MemberVO member, Model model) {
 		Message msg = new Message("/member/signup", "회원 가입에 실패했습니다.");
-
+		
 		if(memberService.signup(member)) {
 			msg = new Message("/", "회원 가입에 성공했습니다.");
 		}
@@ -44,9 +44,9 @@ public class MemberController {
 	}
 	@PostMapping(value="/member/login")
 	public String memberLoginPost(MemberVO member, Model model) {
-		Message msg = new Message("/member/login", "로그인에 실패했습니다");
+		Message msg = new Message("/member/login", "로그인에 실패했습니다.");
 
-		MemberVO user = memberService.login(member);
+		MemberVO user = memberService.login(member); 
 		if(user != null) {
 			msg = new Message("/", "로그인에 성공했습니다.");
 		}
@@ -54,7 +54,7 @@ public class MemberController {
 		model.addAttribute("msg", msg);
 		return "message";
 	}
-	@GetMapping(value="/member/logout")
+	@GetMapping("/member/logout")
 	public String memberLogout(HttpServletRequest request, Model model) {
 		HttpSession session = request.getSession();
 		MemberVO user = (MemberVO)session.getAttribute("user");
@@ -66,4 +66,10 @@ public class MemberController {
 		model.addAttribute("msg", msg);
 		return "message";
 	}
+	
 }
+
+
+
+
+
