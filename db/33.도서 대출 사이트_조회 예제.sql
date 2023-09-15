@@ -81,5 +81,3 @@ FROM
 GROUP BY ME_ID
 ORDER BY 대출도서수 DESC, 아이디 ASC
 LIMIT 1;
-        
-        

@@ -1,5 +1,6 @@
 package kr.kh.study.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class BoardServiceImp implements BoardService{
 
 	@Override
 	public List<BoardVO> getBoardList(Criteria cri) {
-		//매개변수체크(생략)cri 넣으면서 체크
+		//매개변수체크
 		if(cri == null) {
 			cri = new Criteria();
 		}
@@ -70,7 +71,7 @@ public class BoardServiceImp implements BoardService{
 		if(!res) {
 			return false;
 		}
-		//첨부파일 추가
+		//첨부파일 추가 
 		uploadFiles(files, board.getBo_num());
 		return true;
 	}
@@ -109,9 +110,9 @@ public class BoardServiceImp implements BoardService{
 		if(dbBoard == null || !dbBoard.getBo_me_id().equals(user.getMe_id())) {
 			return false;
 		}
-		//추가된 첨부파일 업로드 및 DB추가
+		//추가된 첨부파일 업로드 및 DB 추가
 		uploadFiles(files, board.getBo_num());
-		//삭제된 첨부파일 삭제 및 DB제거
+		//삭제된 첨부파일 삭제 및 DB 제거
 		deleteFiles(delNums);
 		boolean res = boardDao.updateBoard(board);
 		return res;
@@ -119,12 +120,12 @@ public class BoardServiceImp implements BoardService{
 
 	private void deleteFiles(int[] delNums) {
 		if(delNums == null || delNums.length == 0) {
-			return;
+			return ;
 		}
 		List<FileVO> fileList = new ArrayList<FileVO>();
 		for(int fi_num : delNums) {
-			FileVO filVo = boardDao.selectFile(fi_num);
-			fileList.add(filVo);
+			FileVO fileVo = boardDao.selectFile(fi_num);
+			fileList.add(fileVo);
 		}
 		deleteFiles(fileList);
 	}
@@ -141,10 +142,10 @@ public class BoardServiceImp implements BoardService{
 		if(board == null || !board.getBo_me_id().equals(user.getMe_id())) {
 			return false;
 		}
-		//첨부파일을 삭제
-		//게시글의 모든 첨부파일들을 가져옴
+		//첨부파일을 삭제 
+		//게시글의 모든 첨부파일들을 가져옴 
 		List<FileVO> fileList = boardDao.selectFileList(bo_num);
-		//첨부파일 정보를 주면서 삭제하라고 요청
+		//첨부파일 정보를 주면서 삭제하라고 요청 
 		deleteFiles(fileList);
 		return boardDao.deleteBoard(bo_num);
 	}
@@ -160,6 +161,7 @@ public class BoardServiceImp implements BoardService{
 			UploadFileUtils.deleteFile(uploadPath, file.getFi_name());
 			boardDao.deleteFile(file.getFi_num());
 		}
+		
 	}
 
 	@Override

@@ -21,7 +21,7 @@
 			dataType : "json",
 			success : successFunc
 		});
-	}	
+	}
 	</script>
 	<title>스프링</title>
 </head>

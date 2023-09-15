@@ -16,11 +16,11 @@
 		<h3>첨부파일</h3>
 		<c:forEach items="${fileList}" var="file">
 			<div class="box">
-				<a href="<c:url value='/download${file.fi_name}'/>" 
-				download="${file.fi_ori_name}">
-				${file.fi_ori_name}</a>
-				<a href="#" class="btn-del" data-num="${file.fi_num}">
-				<button type="button">X</button></a>
+				<a  href="<c:url 
+					value='/download${file.fi_name}'/>" 
+					download="${file.fi_ori_name }"
+				>${file.fi_ori_name }</a>
+				<a href="#" class="btn-del" data-num="${file.fi_num}"><button type="button">X</button></a>
 			</div>
 		</c:forEach>
 		<c:forEach begin="1" end="${3 - fileList.size() }">
@@ -30,9 +30,9 @@
 	</form>
 	<script type="text/javascript" src="//code.jquery.com/jquery-3.6.1.js"></script>
 	<script type="text/javascript">
-		$('.btn-del').click(function(e) {
+		$('.btn-del').click(function(e){
 			e.preventDefault();
-			let fi_num = $(this).data('num')
+			let fi_num = $(this).data('num');
 			$('.btn-submit').before('<input type="file" name="files"> <br>');
 			$('.btn-submit').before('<input type="hidden" name="delNums" value="'+fi_num+'"> <br>');
 			$(this).parent().remove();

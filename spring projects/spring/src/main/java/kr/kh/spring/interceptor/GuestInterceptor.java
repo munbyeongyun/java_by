@@ -25,6 +25,7 @@ public class GuestInterceptor extends HandlerInterceptorAdapter {
 			//기존에 가려던 URL은 방문하지 않고 메인으로 이동
 			return false;
 		}
+		//로그인 했으면 기존에 가려던 URL을 방문해서 작업 
 		return true;
 	}
 	
