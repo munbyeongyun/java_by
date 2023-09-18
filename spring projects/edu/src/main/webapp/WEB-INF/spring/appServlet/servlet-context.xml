@@ -22,8 +22,6 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="kr.kh.edu.*" />
-	
 	<!-- 타일즈 view resolver -->
 	<beans:bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 	    <beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
@@ -38,5 +36,11 @@
 	        </beans:list>
 	    </beans:property>
 	</beans:bean>
+		
+	
+	
+	<context:component-scan base-package="kr.kh.edu.*" />
+	
+	
 	
 </beans:beans>

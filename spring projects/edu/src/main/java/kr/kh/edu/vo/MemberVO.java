@@ -6,6 +6,7 @@ import lombok.Data;
 public class MemberVO {
 	String me_id;
 	String me_pw;
+	String me_role;
 	String me_email;
 	
 	//자동 로그인 관련 속성
