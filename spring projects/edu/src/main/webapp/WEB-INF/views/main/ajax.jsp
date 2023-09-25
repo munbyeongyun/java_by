@@ -7,7 +7,8 @@
 	<title>Home</title>
 </head>
 <body>
-	<a href="<c:url value='?id=abc'/>">?을 이용하여 전송</a>
-	<a href="<c:url value='/abc'/>">경로에 데이터를 전송</a>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
 </body>
 </html>
