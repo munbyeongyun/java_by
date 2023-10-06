@@ -1,3 +1,7 @@
+drop database IF EXISTS semi;
+create database semi;
+use semi;
+
 DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
@@ -50,7 +54,7 @@ CREATE TABLE `product` (
 DROP TABLE IF EXISTS `image_file`;
 
 CREATE TABLE `image_file` (
-	`file_id`	int unsigned auto_increment	NOT NULL,
+	`file_id`	int unsigned auto_increment	NOT NULL primary key,
 	`file_name`	varchar(255)	NULL,
 	`created_date`	timestamp DEFAULT current_timestamp	NULL,
 	`modified_date`	timestamp DEFAULT current_timestamp	NULL
@@ -150,10 +154,6 @@ ALTER TABLE `address` ADD CONSTRAINT `PK_ADDRESS` PRIMARY KEY (
 
 ALTER TABLE `product` ADD CONSTRAINT `PK_PRODUCT` PRIMARY KEY (
 	`pd_num`
-);
-
-ALTER TABLE `image_file` ADD CONSTRAINT `PK_IMAGE_FILE` PRIMARY KEY (
-	`file_id`
 );
 
 ALTER TABLE `review` ADD CONSTRAINT `PK_REVIEW` PRIMARY KEY (

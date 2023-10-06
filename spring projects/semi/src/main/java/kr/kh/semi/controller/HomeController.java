@@ -15,7 +15,7 @@ public class HomeController {
 	public String mainPage() {
 		logger.info("메인페이지 시작");
 		
-		return "/home";
+		return "/main/home";
 	}
 	
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
